@@ -43,7 +43,7 @@ jobs:
             SOURCE: "/"
             REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
             REMOTE_USER: "root"
-            TARGET: "/home/sh/uploadPath/upload/common/WKuAssets/"
+            TARGET: "/home/sh/uploadPath/upload/common/WKuSHAssets/"
             
       - name: DONE
         run: |
