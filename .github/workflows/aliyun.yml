@@ -35,12 +35,16 @@ jobs:
           ls
           
       # Runs a single command using the runners shell
-#       - name: Deploy/Install to aliyun server
-#         uses: easingthemes/ssh-deploy@v2.0.7
-#         env:
-#             SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
-#             ARGS: "-avzr --delete"
-#             SOURCE: "dist/"
-#             REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
-#             REMOTE_USER: "root"
-#             TARGET: "/home/sh/uploadPath/upload/common/"
+      - name: Deploy/Install to aliyun server
+        uses: easingthemes/ssh-deploy@v2.0.7
+        env:
+            SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
+            ARGS: "-avzr --delete"
+            SOURCE: "/"
+            REMOTE_HOST: ${{ secrets.ALIYUN_SERVER_HOST }}
+            REMOTE_USER: "root"
+            TARGET: "/home/sh/uploadPath/upload/common/WKuAssets/"
+            
+      - name: DONE
+        run: |
+          echo 'DONE'
